@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
+				},
+				warning: {
+					DEFAULT: 'hsl(var(--warning))',
+					foreground: 'hsl(var(--warning-foreground))'
+				},
+				'game-purple': {
+					DEFAULT: 'hsl(var(--game-purple))',
+					foreground: 'hsl(var(--game-purple-foreground))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -84,11 +96,49 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-in': {
+					'0%': {
+						transform: 'scale(0.3) rotate(-10deg)',
+						opacity: '0'
+					},
+					'50%': {
+						transform: 'scale(1.1) rotate(5deg)'
+					},
+					'100%': {
+						transform: 'scale(1) rotate(0deg)',
+						opacity: '1'
+					}
+				},
+				'wiggle': {
+					'0%, 100%': { transform: 'rotate(-3deg)' },
+					'50%': { transform: 'rotate(3deg)' }
+				},
+				'celebration': {
+					'0%': { transform: 'scale(1) rotate(0deg)' },
+					'25%': { transform: 'scale(1.1) rotate(-5deg)' },
+					'50%': { transform: 'scale(1.2) rotate(5deg)' },
+					'75%': { transform: 'scale(1.1) rotate(-5deg)' },
+					'100%': { transform: 'scale(1) rotate(0deg)' }
+				},
+				'star-sparkle': {
+					'0%, 100%': { 
+						transform: 'scale(0) rotate(0deg)',
+						opacity: '0'
+					},
+					'50%': { 
+						transform: 'scale(1) rotate(180deg)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-in': 'bounce-in 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'wiggle': 'wiggle 0.5s ease-in-out',
+				'celebration': 'celebration 0.8s ease-in-out',
+				'star-sparkle': 'star-sparkle 0.8s ease-in-out infinite'
 			}
 		}
 	},
